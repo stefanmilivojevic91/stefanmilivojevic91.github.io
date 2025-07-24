@@ -3,7 +3,7 @@ layout: post
 title: Comparing Azure Messaging Services
 ---
 
-Azure provides three primary messaging services—**Azure Event Grid**, **Azure Service Bus**, and **Azure Event Hubs**—each designed for different architectural needs and message processing patterns. Understanding their core capabilities and use cases helps in choosing the right tool for specific scenarios.
+Azure provides three primary messaging services: **Azure Event Grid**, **Azure Service Bus**, and **Azure Event Hubs**, each designed for different architectural needs and message processing patterns. Understanding their core capabilities and use cases helps in choosing the right tool for specific scenarios.
 
 ---
 
@@ -20,11 +20,12 @@ Typical triggers include:
 **Key characteristics:**
 - Push-based delivery via HTTP to subscribers such as Azure Functions, Logic Apps, WebHooks, etc.  
 - Low latency, near real-time delivery  
-- Supports filtering and event schema mapping  
+- Filtering lets you define rules so that subscribers only receive events that match certain criteria
+- Schema mapping allows you to transform the event data format before delivering it to a subscriber
 - Default event retention is **24 hours**, with optional dead-lettering
 
 **Use case:**  
-Event Grid is ideal for building **reactive systems** that respond to discrete changes in resource state. It excels in **lightweight integrations**, such as triggering a function when a file is uploaded or a setting changes in Azure.
+Event Grid is ideal for building **reactive systems** that respond to discrete changes in resource state. It excels in **lightweight integrations**, such as triggering a function when a file is uploaded or a setting changes in Azure. Can be used for implementing notifications.
 
 ---
 
